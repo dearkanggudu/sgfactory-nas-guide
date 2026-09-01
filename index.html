@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>sgfactory 촬영 폴더 사용 가이드</title>
+  <style>
+    :root{--ink:#17201b;--muted:#647068;--paper:#f6f3ec;--card:#fffdf8;--line:#ded9cd;--green:#245c43;--mint:#dceadd;--amber:#f3df9f;--red:#8c3d34;--shadow:0 18px 50px rgba(48,54,45,.10)}
+    *{box-sizing:border-box} body{margin:0;background:var(--paper);color:var(--ink);font-family:system-ui,-apple-system,"Malgun Gothic","Apple SD Gothic Neo",sans-serif;line-height:1.65}
+    .wrap{max-width:940px;margin:auto;padding:28px 18px 80px}.hero{padding:46px 42px;border-radius:28px;background:var(--green);color:white;box-shadow:var(--shadow)}
+    .eyebrow{font-size:13px;letter-spacing:.14em;font-weight:800;color:#c9e6d3}.hero h1{font-size:clamp(30px,6vw,54px);line-height:1.15;margin:10px 0 14px}.hero p{max-width:680px;margin:0;color:#e2eee6;font-size:17px}
+    .actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:24px}.btn{display:inline-block;padding:12px 17px;border-radius:12px;text-decoration:none;font-weight:800;background:white;color:var(--green)}.btn.alt{background:#ffffff1c;color:white;border:1px solid #ffffff55}
+    nav{display:flex;gap:8px;overflow:auto;padding:18px 2px 4px}.chip{white-space:nowrap;color:var(--ink);text-decoration:none;background:var(--card);border:1px solid var(--line);border-radius:999px;padding:8px 13px;font-size:14px}
+    section{margin-top:22px;padding:28px;border-radius:22px;background:var(--card);border:1px solid var(--line);box-shadow:0 10px 30px rgba(48,54,45,.05)}h2{margin:0 0 6px;font-size:24px}h3{font-size:16px;margin:20px 0 8px}.lead{color:var(--muted);margin-top:0}
+    .grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.tile{padding:16px;border-radius:15px;background:#f2f6f0;border:1px solid #dce5da}.tile strong{display:block;color:var(--green);margin-bottom:4px}.tree{background:#1c2520;color:#eaf4ec;padding:20px;border-radius:16px;overflow:auto;font:14px/1.8 ui-monospace,SFMono-Regular,Consolas,monospace;white-space:pre}
+    ol,ul{padding-left:22px}.rule{display:grid;grid-template-columns:34px 1fr;gap:12px;margin:12px 0}.num{width:30px;height:30px;border-radius:50%;display:grid;place-items:center;background:var(--mint);color:var(--green);font-weight:900}.warn{padding:15px 17px;border-left:4px solid var(--red);background:#fff0ec;border-radius:10px}.ok{padding:15px 17px;border-left:4px solid var(--green);background:#edf6ee;border-radius:10px}.cmd{margin:8px 0;padding:12px 15px;border-radius:12px;background:#f4f1e9;font-weight:700}.footer{text-align:center;color:var(--muted);font-size:13px;margin-top:24px}
+    @media(max-width:650px){.hero{padding:34px 24px}.grid{grid-template-columns:1fr}section{padding:22px 19px}.tree{font-size:12px}}
+  </style>
+</head>
+<body><main class="wrap">
+  <header class="hero"><div class="eyebrow">SGFACTORY · NAS GUIDE</div><h1>촬영 폴더<br>사용 가이드</h1><p>상품 사진을 찾고, Claude와 작업하고, 새 결과물을 안전하게 저장하기 위한 공용 안내서입니다. 서영덕 대표님과 강도윤님이 같은 규칙으로 사용합니다.</p><div class="actions"><a class="btn" href="https://sgfactory.synology.me/sharing/hqg39hbZ4">Claude 도우미 받기</a><a class="btn alt" href="#quick">바로 사용하기</a></div></header>
+  <nav><a class="chip" href="#quick">빠른 사용법</a><a class="chip" href="#folders">폴더 구조</a><a class="chip" href="#rules">정리 규칙</a><a class="chip" href="#claude">Claude 설치</a><a class="chip" href="#safety">안전 규칙</a></nav>
+  <section id="quick"><h2>가장 쉬운 사용법</h2><p class="lead">NAS 탐색기가 연결되어 있다면 파일을 직접 일일이 찾지 말고 Claude에게 품번으로 요청하세요.</p><div class="grid"><div class="tile"><strong>사진 찾기</strong>“MB603 사진 찾아줘.”</div><div class="tile"><strong>결과 비교</strong>“이 상품의 AI컷과 누끼컷 보여줘.”</div><div class="tile"><strong>새 파일 저장</strong>“방금 만든 파일을 용도에 맞게 저장해줘.”</div><div class="tile"><strong>정리 요청</strong>“03_SEO자료를 확인해서 정리해줘.”</div></div><h3>대표님이 새로 만든 파일</h3><p class="ok">우선 <b>촬영 → 03_SEO자료</b>에 저장한 뒤 Claude에게 용도·상황·공유 대상을 판단해 알맞은 파일명과 폴더로 정리해 달라고 요청합니다.</p></section>
+  <section id="folders"><h2>촬영 폴더 구조</h2><p class="lead">숫자는 탐색기에서 항상 같은 순서로 보이게 하는 번호입니다.</p><div class="tree">촬영
+├─ 01_임시보관        임시 자료·아직 위치가 정해지지 않은 자료
+├─ 02_AI작업수신      AI 작업자로부터 받은 완성 결과물
+├─ 03_SEO자료         SEO·상세페이지·설명·대표 작업 자료
+│  └─ [확인필요]      Claude가 위치를 확정하지 못한 자료
+├─ 10_SG              H·T 품번 상품 자료
+├─ 20_모뎀            MB·MK 품번 상품 자료
+├─ 30_덕덕            덕덕 상품 자료
+├─ 40_랄라라운지      랄라라운지 상품 자료
+└─ 90_과거보관        이전 운영 자료·보관 전용</div></section>
+  <section id="rules"><h2>상품 폴더 정리 규칙</h2><p class="lead">상품 폴더 안에서는 필요한 사진을 한눈에 구분합니다.</p><div class="rule"><div class="num">1</div><div><b>누끼</b><br>배경이 제거된 상품 사진. AI 작업자 공유 대상입니다.</div></div><div class="rule"><div class="num">2</div><div><b>AI작업</b><br>AI 작업 결과물. 누끼와 함께 팀에서도 확인할 수 있습니다.</div></div><div class="rule"><div class="num">3</div><div><b>착화느낌</b><br>AI 작업자가 참고해야 하는 착화·연출 이미지입니다.</div></div><div class="rule"><div class="num">4</div><div><b>누끼 미선택</b><br>촬영 원본 중 누끼 작업 대상으로 선택되지 않은 사진입니다.</div></div><div class="rule"><div class="num">5</div><div><b>공유</b><br>추후 외부 또는 팀에 전달할 변동 자료를 모읍니다.</div></div><p class="ok"><b>[AI완]</b>은 AI 결과물을 수신해 상품 폴더에 반영했다는 뜻입니다. 판매자사이트·신상마켓 등록까지 끝났다는 의미는 아닙니다.</p></section>
+  <section id="claude"><h2>Claude 도우미 설치</h2><p class="lead">한 번만 설치하면 이후에는 짧게 말해도 NAS 규칙에 맞춰 찾고 정리하도록 도와줍니다.</p><ol><li>위의 <b>Claude 도우미 받기</b> 버튼을 눌러 ZIP을 다운로드합니다.</li><li>압축을 풀지 않습니다. 이 ZIP은 상품사진 압축본이 아니라 Claude 설치 파일입니다.</li><li>Claude Desktop에서 <b>Customize → Skills → + → Create or Upload Skill</b>을 선택합니다.</li><li>받은 ZIP을 그대로 올리고 <b>NAS 상품파일 도우미</b>를 켭니다.</li><li>Cowork에서 새 프로젝트를 만들고 <b>Use existing folder</b>로 NAS의 <b>촬영</b> 폴더를 연결합니다.</li><li>프로젝트 이름은 <b>NAS 상품작업</b>으로 정합니다.</li></ol></section>
+  <section id="safety"><h2>반드시 지키는 안전 규칙</h2><ul><li>상품 사진은 다시 ZIP으로 압축하지 않습니다.</li><li>기존 파일은 임의로 삭제하거나 덮어쓰지 않습니다.</li><li><b>90_과거보관</b>은 이동·이름변경·정리하지 않습니다.</li><li>중복 또는 불필요해 보이는 파일은 먼저 <b>삭제검토</b> 대상으로 알려줍니다.</li><li>판단하기 어려운 새 자료는 삭제하지 않고 <b>03_SEO자료 → [확인필요]</b>에 둡니다.</li><li>외부 공유가 필요한 자료는 상품 폴더의 <b>공유</b>에서 확인한 뒤 새 링크를 만듭니다.</li></ul><p class="warn"><b>주의:</b> [AI완] 표시는 AI 결과물 수신 완료만 뜻합니다. 판매채널 등록 완료로 해석하지 않습니다.</p></section>
+  <p class="footer">sgfactory 촬영 자료 공용 운영 안내 · 2026.09</p>
+</main></body></html>
